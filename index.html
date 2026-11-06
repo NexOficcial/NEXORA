@@ -20,7 +20,7 @@ body {
 }
 
 header {
-    height: 75px;
+    min-height: 75px;
     padding: 0 8%;
     display: flex;
     align-items: center;
@@ -269,7 +269,6 @@ footer {
 @media(max-width: 650px) {
     header {
         padding: 15px 5%;
-        height: auto;
         flex-wrap: wrap;
         gap: 15px;
     }
@@ -341,41 +340,75 @@ footer {
 
     <div class="games" id="games">
 
-        <article class="game-card" data-name="RABID FIVE" data-category="Экшен">
-            <div class="game-cover">🐺</div>
+        <!-- VILESOUL -->
+        <article class="game-card" data-name="VILESOUL" data-category="Хоррор">
+            <div class="game-cover">👹</div>
+
             <div class="game-info">
-                <h3>RABID FIVE</h3>
-                <div class="category">ЭКШЕН</div>
-                <p class="description">Пять масок. Пять историй. Один город.</p>
+                <h3>VILESOUL</h3>
+                <div class="category">16-BIT HORROR</div>
+
+                <p class="description">
+                    Ты — демон в мрачном пиксельном мире.
+                    Исследуй его и раскрой свои способности.
+                </p>
+
                 <div class="game-buttons">
-                    <button class="details" onclick="showDetails('RABID FIVE')">Подробнее</button>
-                    <button class="download" onclick="showDownload('RABID FIVE')">Скачать</button>
+                    <button class="details" onclick="showDetails('VILESOUL')">
+                        Подробнее
+                    </button>
+
+                    <button class="download" onclick="showDownload('VILESOUL')">
+                        Скачать
+                    </button>
                 </div>
             </div>
         </article>
 
+        <!-- THE FRIENDLY CO. -->
         <article class="game-card" data-name="THE FRIENDLY CO." data-category="Хоррор">
             <div class="game-cover">🎭</div>
+
             <div class="game-info">
                 <h3>THE FRIENDLY CO.</h3>
                 <div class="category">ХОРРОР</div>
-                <p class="description">Неожиданная встреча в странной компании.</p>
+
+                <p class="description">
+                    Неожиданная встреча в странной компании.
+                </p>
+
                 <div class="game-buttons">
-                    <button class="details" onclick="showDetails('THE FRIENDLY CO.')">Подробнее</button>
-                    <button class="download" onclick="showDownload('THE FRIENDLY CO.')">Скачать</button>
+                    <button class="details" onclick="showDetails('THE FRIENDLY CO.')">
+                        Подробнее
+                    </button>
+
+                    <button class="download" onclick="showDownload('THE FRIENDLY CO.')">
+                        Скачать
+                    </button>
                 </div>
             </div>
         </article>
 
+        <!-- COMING SOON -->
         <article class="game-card" data-name="COMING SOON" data-category="Приключения">
             <div class="game-cover">❔</div>
+
             <div class="game-info">
                 <h3>COMING SOON</h3>
                 <div class="category">ПРИКЛЮЧЕНИЯ</div>
-                <p class="description">Новая игра скоро появится в NEXORA.</p>
+
+                <p class="description">
+                    Новая игра скоро появится в NEXORA.
+                </p>
+
                 <div class="game-buttons">
-                    <button class="details" onclick="alert('Скоро появится больше информации!')">Подробнее</button>
-                    <button class="download" onclick="alert('Игра пока не доступна.')">Скачать</button>
+                    <button class="details" onclick="alert('Скоро появится больше информации!')">
+                        Подробнее
+                    </button>
+
+                    <button class="download" onclick="alert('Игра пока не доступна.')">
+                        Скачать
+                    </button>
                 </div>
             </div>
         </article>
@@ -387,7 +420,12 @@ footer {
 
 <section class="launcher" id="launcher">
     <h2>NEXORA LAUNCHER</h2>
-    <p>Устанавливай игры и управляй своей игровой библиотекой в одном месте.</p>
+
+    <p>
+        Устанавливай игры и управляй своей игровой библиотекой
+        в одном месте.
+    </p>
+
     <button onclick="alert('NEXORA Launcher пока находится в разработке!')">
         СКАЧАТЬ LAUNCHER
     </button>
