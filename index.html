@@ -131,4 +131,323 @@ nav a:hover {
 }
 
 .filter {
-    padding: 12
+    padding: 12px 18px;
+    background: #1b1227;
+    color: #ddd;
+    border: 1px solid #49305e;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.filter.active,
+.filter:hover {
+    background: #8734d3;
+    color: white;
+    border-color: #b66cff;
+}
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.game-card {
+    background: #15101e;
+    border: 1px solid #30203f;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+    border-color: #a44dff;
+    box-shadow: 0 0 22px #6825a444;
+}
+
+.game-cover {
+    height: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    background: linear-gradient(135deg, #32154d, #100b19);
+}
+
+.game-info {
+    padding: 20px;
+}
+
+.game-info h3 {
+    font-size: 21px;
+    margin-bottom: 9px;
+}
+
+.category {
+    color: #bb80ff;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 42px;
+}
+
+.game-buttons {
+    display: flex;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.game-buttons button {
+    flex: 1;
+    padding: 10px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.details {
+    background: #30213e;
+    color: white;
+    border: 1px solid #60417b;
+}
+
+.download {
+    background: #963cff;
+    color: white;
+    border: none;
+}
+
+.empty {
+    display: none;
+    color: #aaa;
+    padding: 30px 0;
+}
+
+.launcher {
+    margin: 20px 8% 65px;
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(120deg, #25103b, #130d20);
+    border: 1px solid #633b8c;
+    border-radius: 12px;
+}
+
+.launcher h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.launcher p {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.launcher button {
+    padding: 13px 25px;
+    background: #963cff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #777;
+    background: #0e0a16;
+    border-top: 1px solid #30203f;
+}
+
+@media(max-width: 650px) {
+    header {
+        padding: 15px 5%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .catalog {
+        padding: 40px 6%;
+    }
+
+    .launcher {
+        margin: 15px 6% 45px;
+        padding: 30px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NEXORA</div>
+
+    <nav>
+        <a href="#">Главная</a>
+        <a href="#catalog">Игры</a>
+        <a href="#launcher">Launcher</a>
+    </nav>
+
+    <div class="coins">✦ 100 NC</div>
+</header>
+
+<section class="hero">
+    <h1>PLAY BEYOND LIMITS</h1>
+    <p>
+        Добро пожаловать в NEXORA — игровую платформу,
+        где начинаются новые приключения.
+    </p>
+
+    <button onclick="document.getElementById('catalog').scrollIntoView({behavior:'smooth'})">
+        СМОТРЕТЬ ИГРЫ
+    </button>
+</section>
+
+<section class="catalog" id="catalog">
+    <h2>Каталог игр</h2>
+
+    <div class="controls">
+        <input
+            class="search"
+            id="search"
+            type="text"
+            placeholder="🔎 Найти игру..."
+        >
+
+        <button class="filter active" data-category="Все">Все</button>
+        <button class="filter" data-category="Хоррор">Хорроры</button>
+        <button class="filter" data-category="Экшен">Экшен</button>
+        <button class="filter" data-category="Приключения">Приключения</button>
+    </div>
+
+    <div class="games" id="games">
+
+        <article class="game-card" data-name="RABID FIVE" data-category="Экшен">
+            <div class="game-cover">🐺</div>
+            <div class="game-info">
+                <h3>RABID FIVE</h3>
+                <div class="category">ЭКШЕН</div>
+                <p class="description">Пять масок. Пять историй. Один город.</p>
+                <div class="game-buttons">
+                    <button class="details" onclick="showDetails('RABID FIVE')">Подробнее</button>
+                    <button class="download" onclick="showDownload('RABID FIVE')">Скачать</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="game-card" data-name="THE FRIENDLY CO." data-category="Хоррор">
+            <div class="game-cover">🎭</div>
+            <div class="game-info">
+                <h3>THE FRIENDLY CO.</h3>
+                <div class="category">ХОРРОР</div>
+                <p class="description">Неожиданная встреча в странной компании.</p>
+                <div class="game-buttons">
+                    <button class="details" onclick="showDetails('THE FRIENDLY CO.')">Подробнее</button>
+                    <button class="download" onclick="showDownload('THE FRIENDLY CO.')">Скачать</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="game-card" data-name="COMING SOON" data-category="Приключения">
+            <div class="game-cover">❔</div>
+            <div class="game-info">
+                <h3>COMING SOON</h3>
+                <div class="category">ПРИКЛЮЧЕНИЯ</div>
+                <p class="description">Новая игра скоро появится в NEXORA.</p>
+                <div class="game-buttons">
+                    <button class="details" onclick="alert('Скоро появится больше информации!')">Подробнее</button>
+                    <button class="download" onclick="alert('Игра пока не доступна.')">Скачать</button>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="empty" id="empty">Игры не найдены.</p>
+</section>
+
+<section class="launcher" id="launcher">
+    <h2>NEXORA LAUNCHER</h2>
+    <p>Устанавливай игры и управляй своей игровой библиотекой в одном месте.</p>
+    <button onclick="alert('NEXORA Launcher пока находится в разработке!')">
+        СКАЧАТЬ LAUNCHER
+    </button>
+</section>
+
+<footer>
+    © 2026 NEXORA. ALL RIGHTS RESERVED.
+</footer>
+
+<script>
+const search = document.getElementById("search");
+const cards = [...document.querySelectorAll(".game-card")];
+const filters = [...document.querySelectorAll(".filter")];
+const empty = document.getElementById("empty");
+
+let activeCategory = "Все";
+
+function updateGames() {
+    const query = search.value.toLowerCase();
+    let visible = 0;
+
+    cards.forEach(card => {
+        const name = card.dataset.name.toLowerCase();
+        const category = card.dataset.category;
+
+        const matchesName = name.includes(query);
+        const matchesCategory =
+            activeCategory === "Все" || category === activeCategory;
+
+        const show = matchesName && matchesCategory;
+
+        card.style.display = show ? "" : "none";
+
+        if (show) visible++;
+    });
+
+    empty.style.display = visible === 0 ? "block" : "none";
+}
+
+search.addEventListener("input", updateGames);
+
+filters.forEach(button => {
+    button.addEventListener("click", () => {
+        filters.forEach(item => item.classList.remove("active"));
+        button.classList.add("active");
+
+        activeCategory = button.dataset.category;
+        updateGames();
+    });
+});
+
+function showDetails(name) {
+    alert(name + "\n\nСтраница игры скоро появится!");
+}
+
+function showDownload(name) {
+    alert(name + "\n\nЗагрузка игры пока не настроена.");
+}
+</script>
+
+</body>
+</html>
+```
