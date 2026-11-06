@@ -478,6 +478,11 @@ filters.forEach(button => {
 });
 
 function showDetails(name) {
+    if (name === "VILESOUL") {
+        window.location.href = "vilesoul.html";
+        return;
+    }
+
     alert(name + "\n\nСтраница игры скоро появится!");
 }
 
