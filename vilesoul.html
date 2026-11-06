@@ -1,0 +1,318 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VILESOUL — NEXORA</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #090711;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #100c1c;
+    border-bottom: 1px solid #35204f;
+}
+
+.logo {
+    color: #b66cff;
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px #9b4dff;
+}
+
+.back {
+    color: #d2b2ff;
+    text-decoration: none;
+}
+
+.back:hover {
+    color: white;
+}
+
+.hero {
+    min-height: 430px;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(ellipse at 75% 50%, #582080 0%, transparent 45%),
+        linear-gradient(120deg, #10091d, #1b0d2d);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tag {
+    color: #c68cff;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: clamp(50px, 8vw, 85px);
+    letter-spacing: 5px;
+    text-shadow: 0 0 25px #a44dff;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: #c7b9d7;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+button {
+    padding: 15px 25px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.download {
+    background: #963cff;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px #8129d9;
+}
+
+.download:hover {
+    background: #b36aff;
+}
+
+.secondary {
+    background: transparent;
+    color: white;
+    border: 1px solid #8651b4;
+}
+
+.secondary:hover {
+    background: #28163b;
+}
+
+section {
+    padding: 55px 8%;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.about {
+    color: #bcb2c8;
+    line-height: 1.8;
+    max-width: 850px;
+    font-size: 16px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.feature {
+    background: #171020;
+    border: 1px solid #38234e;
+    padding: 23px;
+    border-radius: 10px;
+}
+
+.feature h3 {
+    color: #c58aff;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #aaa;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.screenshots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.screenshot {
+    min-height: 150px;
+    background: linear-gradient(135deg, #32154d, #100b19);
+    border: 1px solid #593477;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b98ae0;
+    text-align: center;
+    padding: 15px;
+}
+
+.status {
+    display: inline-block;
+    color: #d1a2ff;
+    background: #29163d;
+    border: 1px solid #70449a;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+}
+
+.bottom {
+    text-align: center;
+    background: #120b1c;
+    border-top: 1px solid #38234e;
+}
+
+.bottom p {
+    color: #aaa;
+    margin-bottom: 22px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+    border-top: 1px solid #30203f;
+}
+
+@media(max-width: 600px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    section {
+        padding: 40px 6%;
+    }
+
+    .hero {
+        padding: 65px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NEXORA</div>
+    <a class="back" href="index.html">← Назад в каталог</a>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="tag">NEXORA ORIGINAL GAME</div>
+
+        <h1>VILESOUL</h1>
+
+        <div class="status">16-BIT HORROR</div>
+
+        <p>
+            Добро пожаловать в мрачный пиксельный мир.
+            Ты управляешь демоном, исследуешь опасное окружение
+            и используешь свои способности.
+        </p>
+
+        <div class="buttons">
+            <button class="download"
+                onclick="alert('VILESOUL пока находится в разработке!')">
+                СКАЧАТЬ ИГРУ
+            </button>
+
+            <button class="secondary"
+                onclick="document.getElementById('screenshots').scrollIntoView({behavior:'smooth'})">
+                СКРИНШОТЫ
+            </button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Об игре</h2>
+
+    <p class="about">
+        VILESOUL — пиксельная игра в жанре хоррор.
+        Игроку предстоит управлять демоном, исследовать
+        игровой мир и использовать различные анимации
+        и способности персонажа.
+        <br><br>
+        Игра создаётся на Godot, а её пиксельная графика
+        разрабатывается в Aseprite.
+    </p>
+
+    <div class="features">
+        <div class="feature">
+            <h3>16-BIT GRAPHICS</h3>
+            <p>Пиксельная графика и собственные анимации.</p>
+        </div>
+
+        <div class="feature">
+            <h3>DEMON</h3>
+            <p>Главный герой — необычный демон.</p>
+        </div>
+
+        <div class="feature">
+            <h3>GODOT ENGINE</h3>
+            <p>Игра разрабатывается на движке Godot.</p>
+        </div>
+    </div>
+</section>
+
+<section id="screenshots">
+    <h2>Скриншоты</h2>
+
+    <div class="screenshots">
+        <div class="screenshot">СКРИНШОТ 1<br>Скоро</div>
+        <div class="screenshot">СКРИНШОТ 2<br>Скоро</div>
+        <div class="screenshot">СКРИНШОТ 3<br>Скоро</div>
+    </div>
+</section>
+
+<section class="bottom">
+    <h2>Игра скоро появится!</h2>
+    <p>Следи за обновлениями VILESOUL в NEXORA.</p>
+
+    <button class="download"
+        onclick="alert('Игра пока не доступна для скачивания!')">
+        СКОРО В NEXORA
+    </button>
+</section>
+
+</main>
+
+<footer>
+    © 2026 NEXORA — VILESOUL
+</footer>
+
+</body>
+</html>
+```
