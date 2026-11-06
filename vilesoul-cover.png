@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VILESOUL — NEXORA</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #08060c;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 75px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #100b18;
+    border-bottom: 1px solid #321442;
+}
+
+.logo {
+    color: #b64aff;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #c45aff;
+}
+
+.hero {
+    width: 100%;
+    min-height: 480px;
+    position: relative;
+    display: flex;
+    align-items: end;
+    padding: 55px 8%;
+    background:
+        linear-gradient(0deg, #08060c 0%, transparent 75%),
+        url("vilesoul-cover.png") center 35% / cover no-repeat;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 9vw, 100px);
+    color: #ff2525;
+    text-shadow: 0 0 25px #9d0000;
+}
+
+.content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 45px 25px;
+}
+
+.tag {
+    color: #c45aff;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.description {
+    color: #c3b9ce;
+    line-height: 1.8;
+    max-width: 750px;
+    font-size: 17px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.feature {
+    background: #15101e;
+    border: 1px solid #352044;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.feature h3 {
+    color: #c45aff;
+    margin-bottom: 12px;
+}
+
+.feature p {
+    color: #b8adbf;
+    line-height: 1.6;
+}
+
+.download {
+    margin-top: 45px;
+    padding: 35px;
+    background: linear-gradient(120deg, #25102f, #130c1c);
+    border: 1px solid #71339a;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.download button {
+    margin-top: 20px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 8px;
+    background: #a83bea;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.download button:hover {
+    background: #c45aff;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #756b80;
+    border-top: 1px solid #24172e;
+    margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0 5%;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 30px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NEXORA</div>
+    <a href="index.html">← Назад в каталог</a>
+</header>
+
+<section class="hero">
+    <h1>VILESOUL</h1>
+</section>
+
+<main class="content">
+
+    <div class="tag">16-BIT HORROR</div>
+
+    <h2>Добро пожаловать в VILESOUL</h2>
+
+    <p class="description">
+        VILESOUL — пиксельный хоррор, созданный в Godot.
+        Исследуй мрачный мир, встречай опасных существ
+        и постарайся раскрыть его тайны.
+    </p>
+
+    <section class="features">
+
+        <div class="feature">
+            <h3>🌑 Мрачный мир</h3>
+            <p>Исследуй атмосферные локации в пиксельном стиле.</p>
+        </div>
+
+        <div class="feature">
+            <h3>👹 Опасности</h3>
+            <p>Встречай загадочных существ и проверяй свои навыки.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🎮 16-BIT STYLE</h3>
+            <p>Классическая пиксельная графика и атмосфера хоррора.</p>
+        </div>
+
+    </section>
+
+    <section class="download">
+        <h2>VILESOUL</h2>
+        <p>Игра пока находится в разработке.</p>
+        <button onclick="alert('Загрузка VILESOUL пока недоступна. Игра находится в разработке!')">
+            СКОРО
+        </button>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 NEXORA. ALL RIGHTS RESERVED.
+</footer>
+
+</body>
+</html>
