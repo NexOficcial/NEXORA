@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXORA — Game Store</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080710;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: #0d0b18;
+    border-bottom: 1px solid #24163b;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    color: #b66cff;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px #8b35ff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: #c8c2d4;
+    text-decoration: none;
+    transition: .2s;
+}
+
+nav a:hover {
+    color: #bd7aff;
+}
+
+.coins {
+    background: #211434;
+    border: 1px solid #813dcb;
+    padding: 11px 17px;
+    border-radius: 9px;
+    color: #d6a5ff;
+    font-weight: bold;
+}
+
+.launcher {
+    background: linear-gradient(135deg, #8b35ff, #bd55ff);
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px #8b35ff55;
+}
+
+.hero {
+    min-height: 480px;
+    padding: 100px 10%;
+    background:
+        radial-gradient(ellipse at 75% 50%, #54218b55, transparent 55%),
+        linear-gradient(120deg, #100b1c, #090711);
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tag {
+    color: #c17aff;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(45px, 8vw, 78px);
+    margin: 20px 0;
+    line-height: 1;
+}
+
+h1 span {
+    color: #b66cff;
+    text-shadow: 0 0 35px #963bff77;
+}
+
+.hero p {
+    color: #aaa2b9;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 16px 27px;
+    background: #a34cff;
+    border-radius: 9px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 25px #923cff66;
+    transition: .2s;
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 35px #a34cffaa;
+}
+
+section {
+    padding: 65px 8%;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.section-description {
+    color: #888094;
+    margin-bottom: 35px;
+}
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.game-card {
+    background: #110e1d;
+    border: 1px solid #292039;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+    border-color: #a34cff;
+    box-shadow: 0 0 25px #8739d522;
+}
+
+.game-cover {
+    height: 175px;
+    background:
+        radial-gradient(circle at 50% 40%, #8d3bca, transparent 55%),
+        linear-gradient(135deg, #26123e, #0b0912);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #d8b3ff;
+}
+
+.game-info {
+    padding: 22px;
+}
+
+.game-info h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.game-info p {
+    color: #938ba1;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 45px;
+}
+
+.game-status {
+    display: inline-block;
+    margin-top: 18px;
+    color: #c18aff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.launcher-section {
+    margin: 20px 8% 70px;
+    padding: 45px;
+    border-radius: 17px;
+    border: 1px solid #66339b;
+    background:
+        radial-gradient(circle at 90% 50%, #7628b744, transparent 45%),
+        #130d20;
+}
+
+.launcher-section h2 {
+    font-size: 29px;
+    margin-bottom: 12px;
+}
+
+.launcher-section p {
+    color: #aaa0b8;
+    margin-bottom: 23px;
+    line-height: 1.6;
+}
+
+footer {
+    padding: 30px 8%;
+    text-align: center;
+    color: #625b70;
+    border-top: 1px solid #21192e;
+    font-size: 13px;
+}
+
+@media(max-width: 700px) {
+    header {
+        padding: 15px 5%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 75px 7%;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+
+    .launcher-section {
+        margin: 10px 6% 50px;
+        padding: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NEXORA</div>
+
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#games">Игры</a>
+        <a href="#launcher">Launcher</a>
+        <div class="coins">✦ 100 NC</div>
+    </nav>
+</header>
+
+<main>
+
+<div class="hero" id="home">
+    <div class="hero-content">
+        <div class="tag">WELCOME TO THE NEXT LEVEL</div>
+
+        <h1>PLAY BEYOND<br><span>LIMITS.</span></h1>
+
+        <p>
+            Добро пожаловать в NEXORA.
+            Открывай новые миры, находи интересные игры
+            и становись частью нашего игрового сообщества.
+        </p>
+
+        <a href="#games" class="main-button">СМОТРЕТЬ ИГРЫ →</a>
+    </div>
+</div>
+
+<section id="games">
+    <h2 class="section-title">Наши игры</h2>
+    <p class="section-description">
+        Открой для себя проекты NEXORA.
+    </p>
+
+    <div class="games">
+
+        <div class="game-card">
+            <div class="game-cover">NEXORA</div>
+            <div class="game-info">
+                <h3>Новая игра</h3>
+                <p>Скоро здесь появится наш первый игровой проект.</p>
+                <div class="game-status">COMING SOON</div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-cover">PROJECT 02</div>
+            <div class="game-info">
+                <h3>Следующий проект</h3>
+                <p>Новые приключения уже находятся в разработке.</p>
+                <div class="game-status">IN DEVELOPMENT</div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-cover">PROJECT 03</div>
+            <div class="game-info">
+                <h3>Неизвестный проект</h3>
+                <p>Следи за обновлениями NEXORA.</p>
+                <div class="game-status">COMING SOON</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="launcher-section" id="launcher">
+    <h2>Знакомься с NEXORA Launcher</h2>
+    <p>
+        Единое место для твоих игр.
+        Скоро ты сможешь устанавливать и запускать
+        проекты NEXORA прямо из лаунчера.
+    </p>
+
+    <button class="launcher" onclick="alert('NEXORA Launcher скоро появится!')">
+        NEXORA LAUNCHER
+    </button>
+</div>
+
+</main>
+
+<footer>
+    © 2026 NEXORA. ALL RIGHTS RESERVED.
+</footer>
+
+</body>
+</html>
